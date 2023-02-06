@@ -3,6 +3,9 @@
 $paragraph = $_GET["paragraph"];
 $censored = $_GET["censored"];
 
+$censoredParagraph = str_replace($censored, '***', $paragraph);
+$censoredParagraphLength = strlen($censoredParagraph);
+
 ?>
 
 <p>
@@ -19,12 +22,6 @@ $censored = $_GET["censored"];
     ?>
     caratteri
 </p>
-
-
-<?php 
-    $censoredParagraph = str_replace($censored, '***', $paragraph);
-    $censoredParagraphLength = strlen($censoredParagraph);
-?>
 
 <p>
     <?php
