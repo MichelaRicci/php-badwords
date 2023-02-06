@@ -22,7 +22,20 @@ $censored = $_GET["censored"];
 
 
 <?php 
-    $censored = str_replace($censored, '***', $paragraph);
-    echo $censored;
+    $censoredParagraph = str_replace($censored, '***', $paragraph);
+    $censoredParagraphLength = strlen($censoredParagraph);
 ?>
 
+<p>
+    <?php
+    echo $censoredParagraph;
+    ?>
+</p>
+
+<p>
+    La lunghezza del paragrafo censurato è: 
+    <?php
+        echo $censoredParagraphLength;
+    ?>
+    caratteri
+</p>
